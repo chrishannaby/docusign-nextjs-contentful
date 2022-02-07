@@ -1,0 +1,35 @@
+[
+  {
+    "ts": "2022-02-07T22:02:16.694Z",
+    "level": "error",
+    "error": {
+      "originalError": {
+        "name": "NotFound",
+        "message": "{\n  \"status\": 404,\n  \"statusText\": \"Not Found\",\n  \"message\": \"The resource could not be found.\",\n  \"details\": {\n    \"type\": \"Space\",\n    \"id\": \"SPACE_ID\"\n  },\n  \"request\": {\n    \"url\": \"/spaces/SPACE_ID\",\n    \"headers\": {\n      \"Accept\": \"application/json, text/plain, */*\",\n      \"Content-Type\": \"application/vnd.contentful.management.v1+json\",\n      \"X-Contentful-User-Agent\": \"app contentful.cli/1.10.0; feature space-import; sdk contentful-management.js/7.53.0; platform node.js/v12.16.2; os macOS/v12.16.2;\",\n      \"CF-Sequence\": \"b0e0e1da-5191-42bd-9c20-a76ae4bf6aba\",\n      \"Authorization\": \"Bearer ...ysAsA\",\n      \"user-agent\": \"node.js/v12.16.2\",\n      \"Accept-Encoding\": \"gzip\"\n    },\n    \"method\": \"get\"\n  },\n  \"requestId\": \"c6998bf2-e40d-4a59-8714-02e59a2a7dd0\"\n}"
+      },
+      "data": {
+        "status": 404,
+        "statusText": "Not Found",
+        "message": "The resource could not be found.",
+        "details": {
+          "type": "Space",
+          "id": "SPACE_ID"
+        },
+        "request": {
+          "url": "/spaces/SPACE_ID",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.cli/1.10.0; feature space-import; sdk contentful-management.js/7.53.0; platform node.js/v12.16.2; os macOS/v12.16.2;",
+            "CF-Sequence": "b0e0e1da-5191-42bd-9c20-a76ae4bf6aba",
+            "Authorization": "Bearer ...ysAsA",
+            "user-agent": "node.js/v12.16.2",
+            "Accept-Encoding": "gzip"
+          },
+          "method": "get"
+        },
+        "requestId": "c6998bf2-e40d-4a59-8714-02e59a2a7dd0"
+      }
+    }
+  }
+]

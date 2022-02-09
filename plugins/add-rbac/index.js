@@ -1,11 +1,13 @@
 module.exports = {
-  async onPreBuild({ netlifyConfig }) {
+  async onPostBuild({ netlifyConfig }) {
     if (!process.env.ADD_RBAC) {
       ("Not adding role based access control");
       return;
     }
 
     console.log("Adding role based access control");
+    console.log(netlifyConfig.redirects);
+
     netlifyConfig.redirects.push({
       from: "/*",
       status: 200,

@@ -1,2 +1,6 @@
+[build]
+  publish = ".next"
+  build = "next build"
+
 [[plugins]]
   package = "./plugins/add-rbac"

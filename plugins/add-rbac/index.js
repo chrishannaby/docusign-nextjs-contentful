@@ -1,3 +1,6 @@
+const fs = require("fs");
+const path = require("path");
+
 module.exports = {
   async onPostBuild({ netlifyConfig }) {
     if (!process.env.ADD_RBAC) {
@@ -6,20 +9,14 @@ module.exports = {
     }
 
     console.log("Adding role based access control");
-    console.log(netlifyConfig.redirects);
 
-    netlifyConfig.redirects.push({
-      from: "/*",
-      status: 200,
-      force: true,
-      role: ["admin"],
-    });
+    const redirects = `
+    /* Role=admin 200!
+    /* https://www.docusign.com 401!
+    `.trimStart();
 
-    netlifyConfig.redirects.push({
-      from: "/*",
-      status: 401,
-      force: true,
-      to: "https://www.docusign.com",
-    });
+    const redirectsPath = path.resolve(process.env.PUBLISH_DIR, "_redirects");
+    console.log(`Writing redirects to ${redirectsPath}`);
+    fs.writeFileSync(redirectsPath, redirects);
   },
 };

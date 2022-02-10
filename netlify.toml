@@ -1,6 +1,6 @@
 [build]
   publish = ".next"
-  build = "next build"
+  build = "npm run build"
 
 [[plugins]]
-  package = "./plugins/add-rbac"
+  package = "@netlify/plugin-nextjs"

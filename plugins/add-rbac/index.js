@@ -11,8 +11,8 @@ module.exports = {
     console.log("Adding role based access control");
 
     const redirects = `
-    /* 200! Role=admin
-    /* https://www.docusign.com 401!
+    /blog/* 200! Role=admin
+    /blog/* / 401!
     `.trimStart();
     const redirectsPath = path.resolve(constants.PUBLISH_DIR, "_redirects");
     console.log(`Writing redirects to ${redirectsPath}`);
